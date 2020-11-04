@@ -19,8 +19,13 @@ public class Main {
         double y2 = Double.parseDouble(reader.readLine());
         double x3 = Double.parseDouble(reader.readLine());
         double y3 = Double.parseDouble(reader.readLine());
+        Triangle triangle;
         try {
-            Triangle triangle = new Triangle(x1, y1, x2, y2, x3, y3);
+            triangle = new Triangle(x1, y1, x2, y2, x3, y3);
+            System.out.println("Perimeter of triangle: " + triangle.getPerimeter());
+            System.out.println("Area of triangle: " + triangle.getArea());
+            System.out.println("Coordinates of point of intersection of medians: "
+                    + Arrays.toString(triangle.getPointOfIntersectionOfMedians()));
         } catch (TriangleException t) {
             System.out.println("Error!");
             System.out.println(t.getMessage());
